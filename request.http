@@ -1,0 +1,64 @@
+###
+POST http://localhost:3000/users/register
+content-type:application/json
+
+{
+  "username": "User 4",
+  "password": "passworrrd"
+}
+
+###product 
+
+POST http://localhost:3000/products
+content-type:application/json
+
+{
+  "name": "Tablet",
+  "description": "Gaming Tab",
+  "price": 1300,
+  "imageUrl": "https://example.com/laptop.jpg"
+}
+
+###get prducts
+GET http://localhost:3000/products
+
+###delete products
+DELETE http://localhost:3000/products/1
+
+###patch products
+
+PATCH http://localhost:3000/products/2
+content-type:application/json
+
+{
+  "price": 1400
+}
+
+###create order
+POST http://localhost:3000/order
+content-type:application/json
+
+{
+  "userId": 1,
+  "items": [
+    { "productId": 2, "quantity": 2 },
+    { "productId": 3, "quantity": 1 }
+  ]
+}
+
+###Getordersby users
+GET http://localhost:3000/order/user/1
+
+###Update order status
+PATCH http://localhost:3000/order/1
+content-type:application/json
+
+{
+  "status": "completed"
+}
+
+###Delete order
+DELETE http://localhost:3000/orders/1
+
+
+
